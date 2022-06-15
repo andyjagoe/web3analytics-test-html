@@ -16,7 +16,7 @@
                 plugins: [
                 // attach web3analytics plugin
                 web3analytics.default({
-                    appId: '0xE6d24e69A35944FD15EF2948cA8E07067BD5d57a',
+                    appId: 'YOUR_APP_ID',
                     jsonRpcUrl: 'https://rinkeby.infura.io/v3/your_api_key'
                 })
                 ]

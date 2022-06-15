@@ -1,5 +1,7 @@
 # Using Analytics with HTML
 
+[Demo Site](https://web3analytics-test-html.netlify.app/)
+
 ## Usage
 
 ```html

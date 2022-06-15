@@ -5,6 +5,7 @@
     "description": "Using web3 analytics with regular HTML",
     "scripts": {
         "start": "http-server",
+        "build": "cp index.html build",
         "predeploy": "cp index.html build",
         "deploy": "netlify deploy --dir build --prod"
     },

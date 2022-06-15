@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Using Analytics in HTML</title>
+    <!-- Include `analytics` from CDN -->
+    <script defer src="https://unpkg.com/analytics/dist/analytics.min.js"></script>
+    <script defer src="https://unpkg.com/analytics-plugin-web3analytics@0.1.6/dist/web3analytics.min.js"></script>
+    <script type="text/javascript">
+
+        window.addEventListener('load', function() {
+            /* Initialize analytics */
+            var Analytics = _analytics.init({
+                app: 'web3analytics-html-demo',
+                debug: true,
+                plugins: [
+                // attach web3analytics plugin
+                web3analytics.default({
+                    appId: '0xE6d24e69A35944FD15EF2948cA8E07067BD5d57a',
+                    jsonRpcUrl: 'https://eth-rinkeby.alchemyapi.io/v2/MQHVOzHiX5mQs9IW9TZWaaKQuEUJJFRK'
+                })
+                ]
+            })
+            /* Fire page view */
+            Analytics.page()
+            
+            /* Expose functions */
+            window.trackEvent = function() {
+                Analytics.track('buttonClicked')
+            }
+            window.pageView = function() {
+                Analytics.page()
+            }
+            window.identifyVisitor = function() {
+                Analytics.identify('user-123', {
+                    pro: true,
+                })
+            }
+
+            /*
+            // Attach a listener
+            Analytics.on('*', ({ payload }) => {
+                console.log(`Event ${payload.type}`, payload)
+            });
+            */
+
+        });
+    </script>
+  </head>
+  <body>
+    <h1>
+      Using Web3 Analytics with regular HTML
+    </h1>
+
+    <p>Open the console to see page views firing. Also checkout the networks tab</p>
+
+    <button onClick="trackEvent()">
+      Track Click
+    </button>
+
+    <button onClick="pageView()">
+      Fire page view
+    </button>
+
+    <button onClick="identifyVisitor()">
+      Identify visitor
+    </button>
+
+  </body>
+</html>

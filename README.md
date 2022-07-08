@@ -7,7 +7,7 @@
 ```html
     <!-- Include `analytics` from CDN -->
     <script defer src="https://unpkg.com/analytics/dist/analytics.min.js"></script>
-    <script defer src="https://unpkg.com/analytics-plugin-web3analytics@0.1.6/dist/web3analytics.min.js"></script>
+    <script defer src="https://unpkg.com/analytics-plugin-web3analytics@0.1.7/dist/web3analytics.min.js"></script>
     <script type="text/javascript">
 
         window.addEventListener('load', function() {

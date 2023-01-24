@@ -1,5 +1,9 @@
 # Using Analytics with HTML
 
+This demo shows how to instrument a plain html site with [Web3 Analytics](http://web3analytics.network/) loaded from a CDN. Additional documentation for Web3 Analytics is available [here](https://web3-analytics.gitbook.io/product-docs/).
+
+Debug is enabled so you can see the full interaction in the console of the browser inspector. Click the 'Track event', 'Track page view', or 'Track identify visitor' to see interactions in the console.
+
 [Demo Site](https://web3analytics-test-html.netlify.app/)
 
 ## Usage
